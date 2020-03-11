@@ -1,8 +1,8 @@
 'use strict';
 
-let s = document.querySelector('#input-field');
-let btn = document.querySelector('#btn-search');
-let content = document.querySelector('.container');
+let s = document.querySelector('.form-control');
+let btnGet = document.querySelector('.btn-search');
+let content = document.querySelector('.content');
 
 
 let search;
@@ -16,18 +16,34 @@ function getData() {
     search = data.Search;
     console.log(search)
     debugger;
-    search.forEach(element => {
+    for (let i = 0; i < search.length - 2; i++) {
         let box = document.createElement('div');
         content.appendChild(box);
         box.setAttribute('class', 'box');
-        box.innerHTML = `<img src="${element.Poster}" alt="film-poster">
-                         <h2 class="title">${element.Title}</h2>
-                         <p class="type">${element.Type}</p>
-                         <p class= "year">${element.Year}</p>
-                         <button class="more">more detais</button></img>`;
-    });
+        box.setAttribute('style', 'display:block');
+        box.innerHTML = `<img src="${search[i].Poster}" alt="film-poster" class="poster">
+                        <div class="content__text">
+                        <div class="content__text-title">
+                        <h2 class="title">${search[i].Title}</h2>
+                        </div>
+                        <p class="type">${search[i].Type}</p>
+                        <p class= "year">${search[i].Year}</p>
+                        <button class="more btn btn-info">more detais</button></img>
+                        </div>`;
+    }
+    let btnInfo = document.querySelector('.btn-info');
+    btnInfo.onclick = function () {
+       console.log();
+       
+    }
 }
 
-btn.onclick = function () {
+
+function getInfo() {
+
+}
+
+btnGet.onclick = function (e) {
+    e.preventDefault();
     getData()
 }

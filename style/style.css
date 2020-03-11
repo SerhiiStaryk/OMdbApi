@@ -10,53 +10,61 @@ html {
     padding: 0;
 }
 
-#form {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
+.btn-search {
+    width: 260px;
 }
 
-#input-field {
-    width: 30%;
-    height: 40px;
-    border: none;
-    border: 1px solid #838383;
-    border-radius: 5px;
-    font-size: 19px;
-    padding-left: 15px;
-}
-
-#btn-search {
-    width: 20%;
-    height: 40px;
-    margin-left: 30px;
-    background-color: #fff;
-    border: none;
-    border: 2px solid #2142ff;
-    border-radius: 5px;
-    font-size: 20px;
-    color: #2142ff;
-    transition: all .2s linear; 
-}
-
-#btn-search:hover,
-#btn-search:active,
-#btn-search:focus {
-    background-color: #2142ff;
-    color: #fff;
-}
-
-.container{
-    width: 80%;
-    border: 1px solid #000;
+.content {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.box{
-width: 22%;
-/* height: 200px; */
-border: 1px solid #000;
+
+.box {
+    border: 1px solid #838383;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display:none;
 }
+
+.poster {
+    width: 250px;
+    height: 350px;
+    box-shadow: 0px -2px 5px 3px #989898;
+}
+
+.content__text {
+    width: 250px;
+    text-align: center;
+}
+
+.content__text-title {
+    background-color: #ddd;
+    height: 70px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    
+}
+
+.content__text-title h2 {
+    font-size: 18px;
+    line-height: 70px;
+}
+
+.year{
+    font-weight: 700;
+}
+.btn-info{
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+    /* box.innerHTML = `<img src="${search[i].Poster}" alt="film-poster" class="poster">
+<div class="content__text">
+<h2 class="title">${search[i].Title}</h2>
+<p class="type">${search[i].Type}</p>
+<p class= "year">${search[i].Year}</p>
+<button class="more">more detais</button></img>
+</div>`; */
